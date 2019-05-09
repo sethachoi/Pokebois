@@ -6,12 +6,12 @@ export const REMOVE_SAVED_POKEMON = 'REMOVE_SAVED_POKEMON'
 /*
  * Gets the current state's savedPokemon
  */
-export const getSavedPokemon = state => state.pokemonApp
+export const getSavedPokemon = state => state.savedApp
 
 /*
  * Sets up a component with savedPokemon in the state via recompose
  */
-export const withPokemon = connect(state => ({
+export const withSavedPokemon = connect(state => ({
   savedPokemon: getSavedPokemon(state)
 }))
 
@@ -25,6 +25,6 @@ export const addSavedPokemon = pokemon => ({
 /*
  * Action to remove pokemon from obj
  */
-export const unsetTodos = id => ({
+export const removePokemon = id => ({
   id
 })
