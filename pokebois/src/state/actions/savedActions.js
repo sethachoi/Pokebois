@@ -19,6 +19,7 @@ export const withSavedPokemon = connect(state => ({
  * Action to add current pokemon obj
  */
 export const addSavedPokemon = pokemon => ({
+  type: ADD_SAVED_POKEMON,
   pokemon
 })
 
@@ -26,5 +27,6 @@ export const addSavedPokemon = pokemon => ({
  * Action to remove pokemon from obj
  */
 export const removePokemon = id => ({
+  type: REMOVE_SAVED_POKEMON,
   id
 })

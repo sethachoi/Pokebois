@@ -1,9 +1,9 @@
-import { SET_POKEMON } from 'state/actions'
+import { ADD_POKEMON } from 'state/actions'
 
-const fullApp = ( state = { fullPokemon: {} }, action) => {
+const fullApp = ( state = [], action) => {
   switch (action.type) {
-    case SET_POKEMON:
-      return { fullPokemon: {...action.pokemonObj} }
+    case ADD_POKEMON:
+      return [...state, ...action.pokemonArray]
     default:
       return state
   }

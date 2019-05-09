@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-export const SET_POKEMON = 'SET_POKEMON'
+export const ADD_POKEMON = 'ADD_POKEMON'
 
 /*
  * Gets the current state's savedPokemon
@@ -15,8 +15,9 @@ export const withPokemon = connect(state => ({
 }))
 
 /*
- * Action to add current full pokemon obj
+ * Action to add current full pokemon array
  */
-export const setPokemon = pokemonObj => ({
-  pokemonObj
+export const addPokemon = pokemonArray => ({
+  type: ADD_POKEMON,
+  pokemonArray
 })
